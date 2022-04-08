@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>DSA Suche</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<img class="titelbild" src="static/suchmaschine.png">
+
+<form>
+    <input name="search" placeholder="Hesinde zum Gruße! Wonach sucht Ihr?" autofocus="autofocus">
+
+    <div class="publikation" th:each="publication, stat : ${result}">
+        <img class="thumbnail" th:src="|${publication.key}.0.jpg|" th:title="${publication.key}"></img>
+        <span th:each="page : ${publication.value}">
+        <a th:href="|${publication.key}#page=${page.number}|">
+            <span th:text="|${page.number}|" th:title="${page.text}">Seite</span>
+        </a>
+        &nbsp;
+        </span>
+    </div>
+
+</form>
+<a class="crawl" href="dsasuche/crawl">Suchindex aktualisieren</a>
+</body>
+</html>

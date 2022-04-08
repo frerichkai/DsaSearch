@@ -1,0 +1,15 @@
+dsa:
+  search:
+    drivethru-path: d:/dsa/drivethru       # der Pfad zu Eurem DriveThru-Verzeichnis, in dem sich die PDFs befinden
+    lucene-path: d:/temp/dsasearch         # der Pfad zu dem Verzeichnis, wo die Thumbnails und der Suchindex gespeichert werden
+
+server:
+  address: 127.0.0.1                       # damit niemand von außerhalb unsere PDFs lesen kann
+
+spring:
+  web:
+    resources:
+      static-locations: classpath:/static,file:${drivethru-path},file:${lucene-path}/preview
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher

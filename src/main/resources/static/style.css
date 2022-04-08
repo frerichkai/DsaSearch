@@ -1,0 +1,49 @@
+* {
+    font-family: 'Gentium Book Basic', serif;
+}
+
+body {
+    background-color: #873905;
+}
+
+input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    font-size: 24pt;
+    margin-top: 12pt;
+    margin-bottom: 24pt;
+}
+
+.titelbild {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.thumbnail {
+    width: 120px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.publikation {
+    display: inline-block;
+    width: 120px;
+    vertical-align: top;
+    margin-bottom: 20px;
+    background-image: url("pergament.png");
+    background-size: 100% 100%;
+    padding: 10px;
+    margin: 5px;
+}
+
+.crawl {
+    font-size: 10pt;
+    color: #999;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
